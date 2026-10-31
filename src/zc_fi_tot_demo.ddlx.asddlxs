@@ -1,0 +1,191 @@
+@Metadata.layer: #CORE
+
+@UI.headerInfo: {
+    typeName:       'Registro',
+    typeNamePlural: 'Reporte de Totales y Subtotales',
+    title: {
+        type:  #STANDARD,
+        value: 'DocumentNo'
+    }
+}
+
+@UI.presentationVariant: [
+  {
+    requestAtLeast: [
+      'Uuid'
+    ],
+
+    total: [
+      'Revenue',
+      'Cost',
+      'Margin',
+      'Quantity',
+      'RecordCount'
+    ],
+
+    includeGrandTotal: true,
+
+    visualizations: [
+      {
+        type: #AS_LINEITEM
+      }
+    ]
+  }
+]
+annotate entity ZC_FI_TOT_DEMO
+    with 
+{
+     @UI.hidden: true
+  Uuid;
+
+
+  @UI: {
+      lineItem: [
+        {
+          position: 10,
+          importance: #HIGH
+        }
+      ],
+      selectionField: [
+        {
+          position: 10
+        }
+      ]
+  }
+  CompanyCode;
+
+
+  @UI: {
+      lineItem: [
+        {
+          position: 20,
+          importance: #HIGH
+        }
+      ],
+      selectionField: [
+        {
+          position: 20
+        }
+      ]
+  }
+  DocumentClass;
+
+
+  @UI: {
+      lineItem: [
+        {
+          position: 30,
+          importance: #HIGH
+        }
+      ],
+      selectionField: [
+        {
+          position: 30
+        }
+      ]
+  }
+  FiscalYear;
+
+
+  @UI: {
+      lineItem: [
+        {
+          position: 40,
+          importance: #HIGH
+        }
+      ],
+      selectionField: [
+        {
+          position: 40
+        }
+      ]
+  }
+  FiscalPeriod;
+
+
+  @UI: {
+      lineItem: [
+        {
+          position: 50,
+          importance: #HIGH
+        }
+      ],
+      selectionField: [
+        {
+          position: 50
+        }
+      ]
+  }
+  Region;
+
+
+  @UI: {
+      lineItem: [
+        {
+          position: 60,
+          importance: #HIGH
+        }
+      ],
+      selectionField: [
+        {
+          position: 60
+        }
+      ]
+  }
+  CostCenter;
+
+
+  @UI.lineItem: [
+    {
+      position: 70,
+      importance: #MEDIUM
+    }
+  ]
+  DocumentNo;
+
+
+  @UI.lineItem: [
+    {
+      position: 80,
+      importance: #HIGH
+    }
+  ]
+  Revenue;
+
+
+  @UI.lineItem: [
+    {
+      position: 90,
+      importance: #HIGH
+    }
+  ]
+  Cost;
+
+
+  @UI.lineItem: [
+    {
+      position: 100,
+      importance: #HIGH
+    }
+  ]
+  Margin;
+
+
+  @UI.lineItem: [
+    {
+      position: 110,
+      importance: #HIGH
+    }
+  ]
+  Quantity;
+
+
+  @UI.lineItem: [
+    {
+      position: 120,
+      importance: #MEDIUM
+    }
+  ]
+  RecordCount;
+    
+}

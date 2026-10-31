@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZSD_FI_TOT_CUSTOM_2'
+@ObjectModel.leadingEntity.name: 'ZCE_FI_TOT_CUSTOM'
+define service ZSD_FI_TOT_CUSTOM_2 {
+  expose ZCE_FI_TOT_CUSTOM_2 as TotalsCustom;
+  expose ZCE_FI_TOT_SUMMARY  as TotalsSummary;
+}

@@ -1,0 +1,6 @@
+@EndUserText.label: 'Totales Custom Entity'
+@ObjectModel.leadingEntity.name: 'ZCE_FI_TOT_CUSTOM'
+define service ZSD_FI_TOT_CUSTOM
+  provider contracts odata_v4_ui {
+  expose ZCE_FI_TOT_CUSTOM as TotalsCustom;
+}

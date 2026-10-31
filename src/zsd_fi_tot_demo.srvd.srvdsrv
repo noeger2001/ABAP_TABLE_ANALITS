@@ -1,0 +1,5 @@
+@EndUserText.label: 'UI Service - Totales y Subtotales'
+define service ZSD_FI_TOT_DEMO
+  provider contracts odata_v4_ui {
+  expose ZC_FI_TOT_DEMO as Totals;
+}

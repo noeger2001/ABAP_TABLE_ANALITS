@@ -1,0 +1,103 @@
+@Metadata.layer: #CORE
+
+@UI.headerInfo: {
+    typeName:       'Resumen',
+    typeNamePlural: 'Resumen Sociedad / Clase / Año'
+}
+annotate entity ZCE_FI_TOT_SUMMARY with
+{
+  @UI.lineItem: [
+  {
+    position: 10,
+    importance: #HIGH,
+    label: 'Sociedad'
+  }
+  ]
+  CompanyCode;
+
+
+  @UI.lineItem: [
+    {
+      position: 20,
+      importance: #HIGH,
+      label: 'Clase'
+    }
+  ]
+  DocumentClass;
+
+
+  @UI.lineItem: [
+    {
+      position: 30,
+      importance: #HIGH,
+      label: 'Año'
+    }
+  ]
+  FiscalYear;
+
+
+  @UI.lineItem: [
+    {
+      position: 40,
+      importance: #HIGH,
+      label: 'Ingresos'
+    }
+  ]
+  Revenue;
+
+
+  @UI.lineItem: [
+    {
+      position: 50,
+      importance: #HIGH,
+      label: 'Costos'
+    }
+  ]
+  Cost;
+
+
+  @UI.lineItem: [
+    {
+      position: 60,
+      importance: #HIGH,
+      label: 'Margen'
+    }
+  ]
+  Margin;
+
+
+  @UI.lineItem: [
+    {
+      position: 70,
+      importance: #MEDIUM,
+      label: 'Cantidad'
+    }
+  ]
+  Quantity;
+
+
+  @UI.lineItem: [
+    {
+      position: 80,
+      importance: #MEDIUM,
+      label: 'Nº Registros'
+    }
+  ]
+  RecordCount;
+
+
+  /*
+   * No mostramos estas columnas.
+   *
+   * Solo existen para recibir los filtros compartidos.
+   */
+  @UI.hidden: true
+  FiscalPeriod;
+
+  @UI.hidden: true
+  Region;
+
+  @UI.hidden: true
+  CostCenter;
+
+}
