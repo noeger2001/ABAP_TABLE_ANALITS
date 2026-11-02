@@ -1,0 +1,85 @@
+@Metadata.layer: #CORE
+
+@UI.headerInfo: {
+  typeName:       'Resumen',
+  typeNamePlural: 'Resumen por aerolínea'
+}
+annotate entity ZCE_DMO_FLIGHT_SUM with
+{
+  @UI.lineItem: [
+  {
+   position: 10,
+   importance: #HIGH,
+   label: 'Aerolínea'
+  }
+  ]
+  AirlineID;
+
+
+  @UI.lineItem: [
+    {
+      position: 20,
+      importance: #HIGH,
+      label: 'Nombre'
+    }
+  ]
+  AirlineName;
+
+
+  @UI.lineItem: [
+    {
+      position: 30,
+      importance: #HIGH,
+      label: 'Nº vuelos'
+    }
+  ]
+  TotalFlights;
+
+
+  @UI.lineItem: [
+    {
+      position: 40,
+      importance: #HIGH,
+      label: 'Precio total'
+    }
+  ]
+  TotalPrice;
+
+
+  @UI.lineItem: [
+    {
+      position: 50,
+      label: 'Asientos'
+    }
+  ]
+  TotalMaximumSeats;
+
+
+  @UI.lineItem: [
+    {
+      position: 60,
+      label: 'Ocupados'
+    }
+  ]
+  TotalOccupiedSeats;
+
+
+  @UI.lineItem: [
+    {
+      position: 70,
+      label: 'Disponibles'
+    }
+  ]
+  TotalAvailableSeats;
+
+
+  @UI.lineItem: [
+    {
+      position: 80,
+      label: '% Ocupación'
+    }
+  ]
+  OccupancyRate;
+
+
+}

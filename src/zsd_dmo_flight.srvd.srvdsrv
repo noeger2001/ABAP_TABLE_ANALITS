@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZSD_DMO_FLIGHT'
+@ObjectModel.leadingEntity.name: 'ZCE_DMO_FLIGHT_DTL'
+define service ZSD_DMO_FLIGHT {
+  expose ZCE_DMO_FLIGHT_DTL as FlightDetail;
+  expose ZCE_DMO_FLIGHT_SUM as FlightSummary;
+}

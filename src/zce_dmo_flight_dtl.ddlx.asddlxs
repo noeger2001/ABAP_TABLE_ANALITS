@@ -1,0 +1,138 @@
+@Metadata.layer: #CORE
+
+@UI.headerInfo: {
+  typeName:       'Vuelo',
+  typeNamePlural: 'Detalle de vuelos'
+}
+annotate entity ZCE_DMO_FLIGHT_DTL with
+{
+  @UI: {
+  lineItem: [
+    { position: 10, importance: #HIGH }
+  ],
+  selectionField: [
+    { position: 10 }
+  ]
+  }
+  AirlineID;
+
+
+  @UI: {
+    lineItem: [
+      { position: 20, importance: #HIGH }
+    ],
+    selectionField: [
+      { position: 20 }
+    ]
+  }
+  AirlineName;
+
+
+  @UI: {
+    lineItem: [
+      { position: 30 }
+    ],
+    selectionField: [
+      { position: 30 }
+    ]
+  }
+  ConnectionID;
+
+
+  @UI: {
+    lineItem: [
+      { position: 40 }
+    ],
+    selectionField: [
+      { position: 40 }
+    ]
+  }
+  FlightDate;
+
+
+  @UI: {
+    lineItem: [
+      { position: 50 }
+    ],
+    selectionField: [
+      { position: 50 }
+    ]
+  }
+  DepartureAirport;
+
+
+  @UI: {
+    lineItem: [
+      { position: 60 }
+    ],
+    selectionField: [
+      { position: 60 }
+    ]
+  }
+  DepartureCity;
+
+
+  @UI: {
+    lineItem: [
+      { position: 70 }
+    ],
+    selectionField: [
+      { position: 70 }
+    ]
+  }
+  DestinationAirport;
+
+
+  @UI: {
+    lineItem: [
+      { position: 80 }
+    ],
+    selectionField: [
+      { position: 80 }
+    ]
+  }
+  DestinationCity;
+
+
+  @UI: {
+    lineItem: [
+      { position: 90 }
+    ],
+    selectionField: [
+      { position: 90 }
+    ]
+  }
+  PlaneType;
+
+
+  @UI.lineItem: [
+    { position: 100, importance: #HIGH }
+  ]
+  Price;
+
+
+  @UI.lineItem: [
+    { position: 110 }
+  ]
+  MaximumSeats;
+
+
+  @UI.lineItem: [
+    { position: 120 }
+  ]
+  OccupiedSeats;
+
+
+  @UI.lineItem: [
+    { position: 130 }
+  ]
+  AvailableSeats;
+
+
+  @UI.lineItem: [
+    { position: 140 }
+  ]
+  OccupancyRate;
+
+
+}
