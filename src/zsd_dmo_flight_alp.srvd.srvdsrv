@@ -1,0 +1,5 @@
+@EndUserText.label: 'Flight Analytical Service'
+@ObjectModel.leadingEntity.name: 'ZC_DMO_FLIGHT_ALP'
+define service ZSD_DMO_FLIGHT_ALP {
+  expose ZC_DMO_FLIGHT_ALP as Flights;
+}

@@ -1,0 +1,257 @@
+@Metadata.layer: #CORE
+
+@UI.selectionPresentationVariant: [
+  {
+    qualifier: 'Default',
+    selectionVariantQualifier: 'Default',
+    presentationVariantQualifier: 'ALP'
+  }
+]
+
+@UI.selectionVariant: [
+  {
+    qualifier: 'Default',
+    text: 'Filtros por defecto'
+  }
+]
+
+
+@UI.presentationVariant: [
+  {
+    qualifier: 'ALP',
+
+    visualizations: [
+      {
+        type: #AS_CHART,
+        qualifier: 'FlightsByAirline'
+      },
+      {
+        type: #AS_LINEITEM
+      }
+    ]
+  }
+]
+
+
+@UI.chart: [
+  {
+    qualifier: 'FlightsByAirline',
+
+    title: 'Vuelos por aerolínea',
+
+    chartType: #COLUMN,
+
+    dimensions: [
+      'AirlineID',
+      'PlaneType'
+    ],
+
+    measures: [
+      'NumberOfFlights'
+    ],
+
+    dimensionAttributes: [
+      {
+        dimension: 'AirlineID',
+        role: #CATEGORY
+      },
+      {
+        dimension: 'PlaneType',
+        role: #CATEGORY
+      }
+    ],
+
+    measureAttributes: [
+      {
+        measure: 'NumberOfFlights',
+        role: #AXIS_1
+      }
+    ]
+  }
+]
+
+annotate entity ZC_DMO_FLIGHT_ALP with
+{
+  /* ========================================================
+* AIRLINE
+* ======================================================== */
+
+  @UI: {
+    lineItem: [
+      {
+        position: 10,
+        importance: #HIGH,
+        label: 'Aerolínea'
+      }
+    ],
+
+    selectionField: [
+      {
+        position: 10
+      }
+    ]
+  }
+
+//    @ObjectModel.text.element: [
+//      'AirlineName'
+//    ]
+
+  AirlineID;
+
+
+
+  @UI.lineItem: [
+    {
+      position: 20,
+      importance: #HIGH,
+      label: 'Nombre aerolínea'
+    }
+  ]
+
+  AirlineName;
+
+
+
+  /* ========================================================
+   * CONNECTION
+   * ======================================================== */
+
+  @UI: {
+    lineItem: [
+      {
+        position: 30,
+        importance: #HIGH,
+        label: 'Conexión'
+      }
+    ],
+
+    selectionField: [
+      {
+        position: 20
+      }
+    ]
+  }
+
+  ConnectionID;
+
+
+
+  /* ========================================================
+   * FLIGHT DATE
+   * ======================================================== */
+
+  @UI: {
+    lineItem: [
+      {
+        position: 40,
+        importance: #HIGH,
+        label: 'Fecha'
+      }
+    ],
+
+    selectionField: [
+      {
+        position: 30
+      }
+    ]
+  }
+
+  FlightDate;
+
+
+
+  /* ========================================================
+   * PLANE
+   * ======================================================== */
+
+  @UI: {
+    lineItem: [
+      {
+        position: 50,
+        importance: #HIGH,
+        label: 'Avión'
+      }
+    ],
+
+    selectionField: [
+      {
+        position: 40
+      }
+    ]
+  }
+
+  PlaneType;
+
+
+
+  /* ========================================================
+   * PRICE
+   * ======================================================== */
+
+  @UI.lineItem: [
+    {
+      position: 60,
+      importance: #HIGH,
+      label: 'Precio medio'
+    }
+  ]
+
+  Price;
+
+
+
+  @UI.hidden: true
+  CurrencyCode;
+
+
+
+  /* ========================================================
+   * SEATS
+   * ======================================================== */
+
+  @UI.lineItem: [
+    {
+      position: 70,
+      label: 'Asientos'
+    }
+  ]
+
+  MaximumSeats;
+
+
+  @UI.lineItem: [
+    {
+      position: 80,
+      label: 'Ocupados'
+    }
+  ]
+
+  OccupiedSeats;
+
+
+  @UI.lineItem: [
+    {
+      position: 90,
+      label: 'Disponibles'
+    }
+  ]
+
+  AvailableSeats;
+
+
+
+  /* ========================================================
+   * NUMBER OF FLIGHTS
+   * ======================================================== */
+
+  @UI.lineItem: [
+    {
+      position: 100,
+      importance: #HIGH,
+      label: 'Nº vuelos'
+    }
+  ]
+
+  NumberOfFlights;
+
+}
